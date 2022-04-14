@@ -1,0 +1,18 @@
+.nav {
+    list-style-type: none;
+    margin: o;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+    
+}
+.nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.nav a:hover {
+    color: blueviolet;
+}
