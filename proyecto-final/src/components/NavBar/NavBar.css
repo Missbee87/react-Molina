@@ -1,18 +1,11 @@
-.nav {
-    list-style-type: none;
-    margin: o;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: bisque;
+
+.logo{
+    height: 80px;
+    width: 150px;
+    margin-right: 300px;
     
 }
-.nav a {
-    padding: 10px;
-    text-decoration: none;
-    color: cornflowerblue;
-}
-
-.nav a:hover {
-    color: blueviolet;
+.carrito{
+    height: 50px;
+    margin-left: 150px;
 }
