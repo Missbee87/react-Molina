@@ -1,7 +1,9 @@
 import React from "react";
 import "./NavBar.css";
 import asg from "./assets/asg.jpg";
-import carrito from "./assets/carrito.png";
+import CartWidget from "../CartWidget";
+
+
 
 
 function NavBar(props) {
@@ -19,7 +21,7 @@ function NavBar(props) {
                     <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Servicios</a>
+                    <a class="nav-link"href="#">Servicios</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="#">Quienes Somos</a>
@@ -30,15 +32,15 @@ function NavBar(props) {
                     <li class="nav-item">
                     <a class="nav-link" href="#">Contacto</a>
                     </li>
-                    <img class="carrito" src={carrito} alt="" />
                     
                 </ul>
+                <CartWidget />
                 </div>
             </div>
             </nav>
 
-            
-            </div>
+           
+        </div>
         
     );
 
