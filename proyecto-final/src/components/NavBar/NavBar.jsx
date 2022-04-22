@@ -6,7 +6,7 @@ import CartWidget from "../CartWidget";
 
 
 
-function NavBar(props) {
+function NavBar() {
     return (
         <div>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">

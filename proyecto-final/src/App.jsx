@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import  Button from './components/Button';
 import Box from './components/ItemListContainer';
 import Input  from './components/Input/input';
+import Counter from './components/counter';
 
 
 
@@ -16,9 +17,11 @@ function App() {
   }
   return (
     <div className="App">
-      <NavBar />
+      <NavBar/>
       <Button texto='Buscar' color='red' />
+    
       <Box titulo='BIENVENIDOS A ASG CAR DETAILING' />
+      <Counter stock={5} initial={1}/>
       <Input handleExtraer={extraerValor}/>
 
       <header className="App-header">

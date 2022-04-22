@@ -1,17 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Box.css';
 
-export class Box extends Component {
-  render() {
+
+function Box ({ titulo }) {
+  
+
     return (
-      
-      <div className="box">{this.props.titulo}</div>
-
-
-      
+      <div className="box">{titulo}</div>
     )
   }
-}
+
 
 
 export default Box;
