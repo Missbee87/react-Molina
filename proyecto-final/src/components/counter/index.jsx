@@ -2,8 +2,8 @@ import React, { useState} from 'react';
 import './counter.css'
 
 
-function Counter ({stock, initial}) {
-    const [count, setCount] = useState(0);
+function Counter ({stock, initial, onAdd}) {
+    const [count, setCount] = useState(initial);
 
     function handleAdd(){
         if(count < stock)
@@ -16,13 +16,13 @@ function Counter ({stock, initial}) {
     }
   return (
    
-    <div className="container">
+    <div>
         <button className="btn btn-primary m-2" onClick={handleSubstract}>-</button>
         <span className="boton">     {count}     </span>
         <button className="btn btn-primary m-2" onClick={handleAdd}>+</button>
     <div>
     
-        <button className="btn btn-primary m-6">
+        <button onClick={() => (count <= stock) && onAdd()} className="btn btn-primary m-6">
             Agregar 
         </button>
     </div>
