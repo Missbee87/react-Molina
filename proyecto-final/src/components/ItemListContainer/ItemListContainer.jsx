@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import './Box.css';
+import './ItemListContainer.css';
 import capacitaciones from '../data/capacitaciones';
 import ItemList from '../ItemList';
+
 
 function getCapacitaciones(){
   return new Promise( (resolve, reject) => {
@@ -12,7 +13,7 @@ function getCapacitaciones(){
 }
 
 
-function Box ({ titulo }) {
+function ItemListContainer ({ greeting }) {
   const [capacitaciones, setCapacitaciones] = useState ([]);
   useEffect ( () => {
     getCapacitaciones().then( respuestaPromise => {
@@ -24,12 +25,16 @@ function Box ({ titulo }) {
   
 
     return (
-      <div className="box">{titulo}
-      <ItemList capacitaciones={capacitaciones} />
+      <div className="box">{greeting}
+      <div className="container">
+        <div className="row">
+        <ItemList capacitaciones={capacitaciones} />
+        </div>
+      </div>
       </div>
     )
   }
 
 
 
-export default Box;
+export default ItemListContainer;

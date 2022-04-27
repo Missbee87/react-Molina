@@ -1,8 +1,8 @@
 import React, { useState} from 'react';
-import './counter.css'
+import './ItemCount.css'
 
 
-function Counter ({stock, initial, onAdd}) {
+function ItemCount ({stock, initial, onAdd}) {
     const [count, setCount] = useState(initial);
 
     function handleAdd(){
@@ -14,21 +14,22 @@ function Counter ({stock, initial, onAdd}) {
         if(count > initial)
         setCount(count - 1)
     }
+    
+    
   return (
    
     <div>
         <button className="btn btn-primary m-2" onClick={handleSubstract}>-</button>
         <span className="boton">     {count}     </span>
         <button className="btn btn-primary m-2" onClick={handleAdd}>+</button>
-    <div>
+        
+            <button onClick={() => (count <= stock) && onAdd()} className="btn btn-primary m-6">
+                Agregar 
+            </button>
     
-        <button onClick={() => (count <= stock) && onAdd()} className="btn btn-primary m-6">
-            Agregar 
-        </button>
-    </div>
     </div>
   )
 }
 
 
-export default Counter
+export default ItemCount

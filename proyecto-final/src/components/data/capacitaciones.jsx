@@ -8,7 +8,7 @@ const capacitaciones = [
   },
   
   {
-      nombre: "Renew car",
+      nombre: "Renew car detail",
       id: 2,
       precio: 30000,
       imagen:"https://kilometrosquecuentan.goodyear.eu/wp-content/uploads/2020/07/car-detailing-pulido.jpg"

@@ -1,30 +1,32 @@
 import React from 'react'
-import capacitaciones from '../data/capacitaciones'
 import './item.css'
-import {Col, Card} from "react-bootstrap"
-import Counter from '../counter'
+import {Card} from "react-bootstrap"
+import ItemCount from '../ItemCount/ItemCount'
 
 
 
 function Item( {capacitaciones}) {
   return (
+  <>
+ 
+         
+         <div class="col-md-3 col"> 
+       
+          <Card style={{height:"100%"}}>
+            <Card.Img className="imagen" variant="top" src={capacitaciones.imagen} />
+            <Card.Body>
+              <Card.Title>{capacitaciones.nombre}</Card.Title>
+              <Card.Text>${capacitaciones.precio}</Card.Text>
+              <ItemCount stock={5} initial={0}/>
+            </Card.Body>
+          </Card>
+          
+        </div>
+   
+   
     
-    <>
-  <div className="container">
-    <div className="row">
-    <Col className="col-md-3">
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={capacitaciones.imagen} />
-        <Card.Body>
-          <Card.Title>{capacitaciones.nombre}</Card.Title>
-          <Card.Text>${capacitaciones.precio}</Card.Text>
-          <Counter stock={5} initial={0}/>
-        </Card.Body>
-      </Card>
-    </Col>
-    </div>
-  </div>
-     </>       
+    
+  </>       
  
         
         
