@@ -9,9 +9,7 @@ function ItemList( {capacitaciones}) {
       {capacitaciones.map(thiscapacitaciones => {
           return(
               <Item capacitaciones={thiscapacitaciones} key={thiscapacitaciones.id} />
-              
-          )
-
+            )
       })
      
     }

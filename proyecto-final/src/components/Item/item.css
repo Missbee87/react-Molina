@@ -11,5 +11,10 @@
 }
 .imagen{
     height: 300px;
+    
+}
+
+.col-md-3 {
+    margin-left: 80px;
 }
 

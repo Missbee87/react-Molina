@@ -1,22 +1,27 @@
 import NavBar from './components/NavBar/NavBar';
 import  Button from './components/Button';
-import Input  from './components/Input/input';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
+
+//import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
 
-  const extraerValor = (valorDelInput) => {
+  /*const extraerValor = (valorDelInput) => {
     return console.log(valorDelInput);
-  }
+  }*/
   return (
     <div className="App">
-      <NavBar/>
+      <header className='App-header'>
+        <NavBar/>
+      </header>
       <Button texto='Buscar' color='red' />
-      <ItemListContainer greeting='BIENVENIDOS A ASG CAR DETAILING' />
-      <Input handleExtraer={extraerValor}/>
-
+      <ItemDetailContainer/>
       
-    </div>
+  
+      
+     
+  </div>
   );
 }
 
