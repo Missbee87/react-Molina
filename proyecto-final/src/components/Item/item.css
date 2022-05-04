@@ -13,6 +13,14 @@
     height: 300px;
     
 }
+.link {
+    font-size: 30px;
+    text-decoration: none;
+    color: blueviolet;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 10px;
+}
 
 .col-md-3 {
     margin-left: 80px;

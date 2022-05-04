@@ -2,34 +2,24 @@ import React from "react";
 import "./NavBar.css";
 import asg from "./assets/asg.jpg";
 import CartWidget from "../CartWidget/CartWidget";
+import { NavLink} from "react-router-dom";
 
 
 function NavBar() {
     return (
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <img  class="logo"src={asg} alt="" />
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="container-fluid">
+                <img  className="logo"src={asg} alt="" />
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link"href="#">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Quienes Somos</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Capacitaciones</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                    </li>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                <ul className="navbar-nav">
+                 <li ><NavLink to ='/category/servicios' className="nav">Servicios</NavLink></li>
+                 <li><NavLink to ='/category/cursos' className="nav">Cursos</NavLink></li>
+                 
+                 <li><NavLink to ='/category/productos' className="nav" >Productos</NavLink></li>
                     
                 </ul>
                 <CartWidget />

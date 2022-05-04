@@ -1,7 +1,9 @@
-import React from 'react'
-import './item.css'
-import {Card} from "react-bootstrap"
-import ItemCount from '../ItemCount/ItemCount'
+import React from 'react';
+import './item.css';
+import {Card} from "react-bootstrap";
+import ItemCount from '../ItemCount/ItemCount';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -14,6 +16,7 @@ function Item( {capacitaciones}) {
             <Card.Body>
               <Card.Title>{capacitaciones.nombre}</Card.Title>
               <Card.Text>${capacitaciones.precio}</Card.Text>
+              <Link className="link" to={'/item/' + capacitaciones?.id}>Ver detalle</Link>
               <ItemCount stock={5} initial={0}/>
             </Card.Body>
           </Card>

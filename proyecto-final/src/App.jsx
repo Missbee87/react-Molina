@@ -1,28 +1,36 @@
 import NavBar from './components/NavBar/NavBar';
-import  Button from './components/Button';
+import Button from './components/Button/Button';
+import { Routes, Route} from 'react-router-dom';
+import ItemListContainer from './pages/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './pages/ItemDetailContainer';
 
 
-//import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
+
 
 function App() {
 
-  /*const extraerValor = (valorDelInput) => {
-    return console.log(valorDelInput);
-  }*/
+
   return (
+
     <div className="App">
-      <header className='App-header'>
-        <NavBar/>
-      </header>
-      <Button texto='Buscar' color='red' />
-      <ItemDetailContainer/>
-      
+
+    <header className='App-header'>
+      <NavBar/>
+    </header>
+    <Button texto='Buscar' color='red' />
   
-      
-     
+    <Routes>
+      <Route path='/' element={<ItemListContainer/> } />
+      <Route path='/category/:categoryId' element={<ItemListContainer/> }/>
+      <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+    </Routes>
+
+    
   </div>
+          
+  
   );
 }
+
 
 export default App;

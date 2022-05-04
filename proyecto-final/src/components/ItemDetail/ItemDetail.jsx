@@ -12,12 +12,12 @@ function ItemDetail( {capacitacion}) {
     <div>
       <div className="item-detail">
         <div className="left">
-          <img src={capacitacion.imagen} alt="" />
+          <img src={capacitacion?.imagen} alt="" />
         </div>
         <div className="right">
-          <h1>{capacitacion.nombre}</h1>
-          <p>{capacitacion.descripcion}</p>
-          <p className="precio">${capacitacion.precio}</p>
+          <h1>{capacitacion?.nombre}</h1>
+          <p>{capacitacion?.descripcion}</p>
+          <p className="precio">${capacitacion?.precio}</p>
           <ItemCount stock={5} initial={0}/>
         </div>
       </div>
