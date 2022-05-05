@@ -1,9 +1,6 @@
-import React from 'react'
-import ItemCount from '../ItemCount/ItemCount'
-import "./ItemDetail.css"
-
-
-
+import React from 'react';
+import ItemCount from '../ItemCount/ItemCount';
+import "./ItemDetail.css";
 
 
 function ItemDetail( {capacitacion}) {

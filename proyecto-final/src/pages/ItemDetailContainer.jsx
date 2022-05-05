@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from '../components/ItemDetail/ItemDetail';
 import { Spinner } from 'reactstrap';
@@ -43,40 +43,38 @@ function getCapacitacion(id){
       imagen:"https://http2.mlstatic.com/D_NQ_NP_636991-MLA47602365667_092021-O.webp",
       descripcion:"Características:Limpieza Delicada y sin marcas en todas las superficies de tu hogar, textura suave y delicada, larga duración extra absorción, no deja rastros ni emite pelusas, ideal para lavado, secado, encerado, etc. de superficies"
 
-  },
-  {
-    id: 5,
-    nombre: "Kit pulido",
-    precio: 5000,
-    category: "productos",
-    imagen:"https://http2.mlstatic.com/D_NQ_NP_871148-MLA47921463175_102021-O.webp"
-},
-  {
-    id: 6,
-    nombre: "Curso para polarizados",
-    precio: 10000,
-    category: "cursos",
-    imagen:"https://http2.mlstatic.com/D_NQ_NP_883652-MLA43677241471_102020-O.webp",
-    descripcion:"Explicación detalla del paso a paso, apoyada por imágenes y vídeos de como polarizar un auto, explicando técnicas usadas en cada ventanilla, luneta, etc. Mostrando cuales son las herramientas necesarias y como utilizar cada una de ellas."
-  },
-  {
-    id: 7,
-    nombre: "Curso audiocar",
-    precio: 10000,
-    category: "cursos",
-    imagen:"https://http2.mlstatic.com/D_NQ_NP_951761-MLA43677172823_102020-O.webp",
-    descripcion:"El curso pretende explicar cómo realizar una instalación de sonido en un auto (conocido popularmente como Audio Car).Para ello se analizará en cada capítulo los componentes necesarios, las herramientas a utilizar y la forma de instalar cada componente para su uso óptimo."
-  },
+      },
+      {
+        id: 5,
+        nombre: "Kit pulido",
+        precio: 5000,
+        category: "productos",
+        imagen:"https://http2.mlstatic.com/D_NQ_NP_871148-MLA47921463175_102021-O.webp",
+        descripcion:"Ahora podes pulir tu vehículo de la manera mas rapida y fácil con cualquier taladro o pulidora, su adaptador de backing plate es adaptable a cualquier taladro del mercado o pulidor, Renegade Products trae esta completísimo Kit imperdible TOP ventas en todo el mundo, ya que te brinda todos los pads que necesitas para pulir en todas las etapas hasta el pulido final en tu vehículo."
+    },
+      {
+        id: 6,
+        nombre: "Curso para polarizados",
+        precio: 10000,
+        category: "cursos",
+        imagen:"https://http2.mlstatic.com/D_NQ_NP_883652-MLA43677241471_102020-O.webp",
+        descripcion:"Explicación detalla del paso a paso, apoyada por imágenes y vídeos de como polarizar un auto, explicando técnicas usadas en cada ventanilla, luneta, etc. Mostrando cuales son las herramientas necesarias y como utilizar cada una de ellas."
+      },
+      {
+        id: 7,
+        nombre: "Curso audiocar",
+        precio: 10000,
+        category: "cursos",
+        imagen:"https://http2.mlstatic.com/D_NQ_NP_951761-MLA43677172823_102020-O.webp",
+        descripcion:"El curso pretende explicar cómo realizar una instalación de sonido en un auto (conocido popularmente como Audio Car).Para ello se analizará en cada capítulo los componentes necesarios, las herramientas a utilizar y la forma de instalar cada componente para su uso óptimo."
+      },
     
   ];
    const capacitacion = capacitaciones.filter(capacitacion => capacitacion.id === parseInt(id)); 
    
-   
-    setTimeout(() => {
-      
-        resolve (capacitacion[0]);
+   setTimeout(() => {
+    resolve (capacitacion[0]);
     }, 2000);
-    
   });
   return myPromise;
 }
@@ -98,20 +96,16 @@ function ItemDetailContainer () {
   
   
 
-    return (
-    
-      <div className="container">
-        <div className="row">
+  return (
+    <div className="container">
+      <div className="row">
         <ItemDetail capacitacion={capacitacion} />
-        { Loading ? <Spinner className="loading-spinner"/> : ItemDetail}
-        </div>
-       
-          
-      
+        { Loading && <Spinner className="loading-spinner"/> }
       </div>
+    </div>
     
     )
-  }
+  };
 
 
 

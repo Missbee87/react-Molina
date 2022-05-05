@@ -5,6 +5,8 @@ import CartWidget from "../CartWidget/CartWidget";
 import { NavLink} from "react-router-dom";
 
 
+
+
 function NavBar() {
     return (
         <div>
@@ -15,25 +17,17 @@ function NavBar() {
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
-                 <li ><NavLink to ='/category/servicios' className="nav">Servicios</NavLink></li>
-                 <li><NavLink to ='/category/cursos' className="nav">Cursos</NavLink></li>
-                 
-                 <li><NavLink to ='/category/productos' className="nav" >Productos</NavLink></li>
-                    
-                </ul>
-                <CartWidget />
+                    <ul className="navbar-nav">
+                    <li><NavLink to ='/category/servicios' className="nav">Servicios</NavLink></li>
+                    <li><NavLink to ='/category/cursos' className="nav">Cursos</NavLink></li>
+                    <li><NavLink to ='/category/productos' className="nav" >Productos</NavLink></li>
+                    </ul>
+                    <CartWidget/>
                 </div>
             </div>
             </nav>
-
-           
-        </div>
+       </div>
         
     );
-
-
-
-
 }
 export default NavBar;
