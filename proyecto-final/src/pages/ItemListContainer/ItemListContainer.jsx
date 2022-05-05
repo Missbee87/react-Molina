@@ -7,8 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../components/Spinner/spinner.css';
 
 function getCapacitaciones(category){
-  const myPromise = new Promise( (resolve, reject) => {
-    const capacitaciones = [
+  const MyPromise = new Promise( (resolve, reject) => {
+    const Capacitaciones = [
       {
         id: 1,
         nombre: "Tratamiento cerámico",
@@ -72,12 +72,12 @@ function getCapacitaciones(category){
       descripcion:"El curso pretende explicar cómo realizar una instalación de sonido en un auto (conocido popularmente como Audio Car).Para ello se analizará en cada capítulo los componentes necesarios, las herramientas a utilizar y la forma de instalar cada componente para su uso óptimo."
     },
   ];
-    const capacitacionesFiltered =  category ? capacitaciones.filter(c => c.category === category) : capacitaciones;
+    const CapacitacionesFiltered =  category ? Capacitaciones.filter(c => c.category === category) : Capacitaciones;
     setTimeout( () => {
-      resolve(capacitacionesFiltered);
+      resolve(CapacitacionesFiltered);
     }, 2000);
   });
-  return myPromise
+  return MyPromise
 }
 
 

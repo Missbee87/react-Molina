@@ -7,8 +7,8 @@ import '../components/Spinner/spinner.css';
 
 
 function getCapacitacion(id){
-  const myPromise = new Promise( (resolve, reject) => {
-    const capacitaciones = [
+  const MyPromise = new Promise( (resolve, reject) => {
+    const Capacitaciones = [
       {
         id: 1,
         nombre: "Tratamiento cerámico",
@@ -70,13 +70,13 @@ function getCapacitacion(id){
       },
     
   ];
-   const capacitacion = capacitaciones.filter(capacitacion => capacitacion.id === parseInt(id)); 
+   const Capacitacion = Capacitaciones.filter(Capacitacion => Capacitacion.id === parseInt(id)); 
    
    setTimeout(() => {
-    resolve (capacitacion[0]);
+    resolve (Capacitacion[0]);
     }, 2000);
   });
-  return myPromise;
+  return MyPromise;
 }
 
 
