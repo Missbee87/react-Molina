@@ -100,7 +100,7 @@ function ItemListContainer () {
         <div className="container">
           <div className="row">
             <ItemList capacitaciones={capacitaciones} />
-            { Loading && <Spinner animation="grow"/> }
+            { Loading && <Spinner className='loading-spinner' /> }
           </div>
         </div>
       </div>

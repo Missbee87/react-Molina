@@ -3,6 +3,8 @@ import Button from './components/Button/Button';
 import { Routes, Route} from 'react-router-dom';
 import ItemListContainer from './pages/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './pages/ItemDetailContainer';
+import Cart from './pages/Cart/Cart';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <Button texto='Buscar' color='red' />
       <Routes>
         <Route path='/' element={<ItemListContainer/> } />
+        <Route path='/cart' element={<Cart />}/>
         <Route path='/category/:categoryId' element={<ItemListContainer/> }/>
         <Route path='/item/:id' element={<ItemDetailContainer/>}/>
       </Routes>

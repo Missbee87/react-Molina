@@ -11,3 +11,13 @@ img {
 .precio {
     font-size: 50px;
 }
+
+.count-container {
+    width: 80%;
+}
+
+.count-container a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
