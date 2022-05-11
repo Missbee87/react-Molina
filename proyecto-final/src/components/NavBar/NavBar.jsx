@@ -2,12 +2,12 @@ import React from "react";
 import "./NavBar.css";
 import asg from "./assets/asg.jpg";
 import CartWidget from "../CartWidget/CartWidget";
-import { NavLink} from "react-router-dom";
+import {  NavLink} from "react-router-dom";
 
 
 
 
-function NavBar() {
+function NavBar(props) {
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -16,6 +16,7 @@ function NavBar() {
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
+                  
                     <ul className="navbar-nav">
                     <li><NavLink to ='/' className="nav"><img  className="logo"src={asg} alt="" /></NavLink></li>
                     <li><NavLink to ='/category/servicios' className="nav">Servicios</NavLink></li>

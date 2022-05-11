@@ -18,10 +18,12 @@ function ItemCount ({stock, initial, onAdd}) {
     
   return (
    
-    <div>
-        <button className="btn btn-primary m-2" onClick={handleSubstract}>-</button>
-        <input className="boton" readOnly value={count} />
-        <button className="btn btn-primary m-2" onClick={handleAdd}>+</button>
+    <div className='item-count-container'>
+        <div>
+            <button  onClick={handleSubstract}>-</button>
+            <input  readOnly value={count} />
+            <button  onClick={handleAdd}>+</button>
+        </div>
         <button onClick={() => (count <= stock) && onAdd(count)} className="btn btn-primary m-6">
             Agregar al carrito 
         </button>

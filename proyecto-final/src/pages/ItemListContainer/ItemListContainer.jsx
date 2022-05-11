@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ItemListContainer.css';
 import ItemList from '../../components/ItemList';
 import { useParams } from 'react-router';
 import { Spinner } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../components/Spinner/spinner.css';
-import CartContext from '../../components/store/Cart-context';
+
 
 
 function getCapacitaciones(category){
@@ -87,12 +87,10 @@ function ItemListContainer () {
   const [Loading, SetLoading] = useState ([false]);
   const [capacitaciones, setCapacitaciones] = useState ([]);
   const {categoryId} = useParams();
-  const CartCtx = useContext(CartContext);
+  
 
 
-  useEffect(()  => {
-      console.log(CartCtx.products);
-  }, []);
+  
   useEffect ( () => {
     SetLoading(true);
     getCapacitaciones(categoryId)

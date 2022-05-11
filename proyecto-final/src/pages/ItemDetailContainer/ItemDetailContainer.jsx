@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ItemDetail from '../components/ItemDetail/ItemDetail';
+import ItemDetail from '../../components/ItemDetail/ItemDetail';
 import { Spinner } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../components/Spinner/spinner.css';
+import '../../components/Spinner/spinner.css';
+import './ItemDetailContainer.css'
+
+
 
 
 function getCapacitacion(id){
@@ -84,6 +87,8 @@ function ItemDetailContainer () {
   const [Loading, SetLoading] = useState ([false]);
   const [capacitacion, setCapacitacion] = useState ({});
   const { id } = useParams();
+  
+ 
   useEffect ( () => {
     SetLoading(true);
     getCapacitacion(id)
