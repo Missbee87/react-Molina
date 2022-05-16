@@ -32,19 +32,12 @@ function ItemDetail( {capacitacion}) {
             
             <div className='count-container'>
            
-              <ItemCount stock={5} initial={0} onAdd= {addHandler}/>
-              <button className="botonera" onClick={() => console.log(cartCtx.products)}> Imprimir carrito</button>
-              <button className="botonera" onClick={() => cartCtx.removeProduct(capacitacion.id)}>Remove product</button>
-              <button className="botonera" onClick={() => cartCtx.clear()}> Clear</button>
-              <button className="botonera" onClick={() => console.log(cartCtx.isInCart(capacitacion.id))}> Is in cart</button>
-              <button className="botonera" onClick={() => console.log(cartCtx.getCartQuantity())}> Quantity</button>
-              {cartCtx.products.length &&
-              <button onClick={() => console.log(CartContext)}>
-                <Link to='/cart'>
-                  Terminar compra ({ cartCtx.getCartQuantity()} capacitaciones)
-                </Link>
-                </button>
-                }
+            <ItemCount initial ={0} stock={capacitacion.stock} onAdd= {addHandler}/>
+            
+
+              
+            
+              
 
             </div>
           </div>

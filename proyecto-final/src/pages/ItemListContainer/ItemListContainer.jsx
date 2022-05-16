@@ -14,6 +14,7 @@ function getCapacitaciones(category){
       {
         id: 1,
         nombre: "Tratamiento cerámico",
+        stock: 5,
         precio: 10000,
         category: "servicios",
         imagen:"https://dercocenter-api.s3.us-east-1.amazonaws.com/images/contents/2021-08-25-car-detailing.jpg",
@@ -23,6 +24,7 @@ function getCapacitaciones(category){
     {
         id: 2,
         nombre: "Renew car detail",
+        stock: 5,
         precio: 30000,
         category: "servicios",
         imagen:"https://kilometrosquecuentan.goodyear.eu/wp-content/uploads/2020/07/car-detailing-pulido.jpg",
@@ -34,6 +36,7 @@ function getCapacitaciones(category){
     {
         id: 3,
         nombre: "Sacabollos artesanal",
+        stock: 5,
         precio: 50000,
         category: "servicios",
         imagen:"https://st2.depositphotos.com/2101611/9080/i/600/depositphotos_90806810-stock-photo-a-man-cleaning-car-with.jpg",
@@ -43,6 +46,7 @@ function getCapacitaciones(category){
     {
       id: 4,
       nombre: "Paños de microfibra",
+      stock: 5,
       precio: 5000,
       category: "productos",
       imagen:"https://http2.mlstatic.com/D_NQ_NP_636991-MLA47602365667_092021-O.webp",
@@ -52,6 +56,7 @@ function getCapacitaciones(category){
     {
       id: 5,
       nombre: "Kit pulido pads pulir",
+      stock: 5,
       precio: 5000,
       category: "productos",
       imagen:"https://http2.mlstatic.com/D_NQ_NP_871148-MLA47921463175_102021-O.webp",
@@ -60,6 +65,7 @@ function getCapacitaciones(category){
     {
       id: 6,
       nombre: "Curso para polarizados",
+      stock: 5,
       precio: 10000,
       category: "cursos",
       imagen:"https://http2.mlstatic.com/D_NQ_NP_883652-MLA43677241471_102020-O.webp",
@@ -68,6 +74,7 @@ function getCapacitaciones(category){
     {
       id: 7,
       nombre: "Curso detallado audiocar",
+      stock: 5,
       precio: 15000,
       category: "cursos",
       imagen:"https://http2.mlstatic.com/D_NQ_NP_951761-MLA43677172823_102020-O.webp",

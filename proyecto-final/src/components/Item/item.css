@@ -26,4 +26,13 @@
    padding: 10px;
    
 }
+.bubble-add {
+    margin: 0;
+    height: 0;
+    position: relative;
+    top: -20%;
+    left: 90%;
+   
+    
+}
 

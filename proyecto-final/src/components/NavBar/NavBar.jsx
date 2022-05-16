@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./NavBar.css";
 import asg from "./assets/asg.jpg";
 import CartWidget from "../CartWidget/CartWidget";
-import {  NavLink} from "react-router-dom";
+import { NavLink} from "react-router-dom";
+import CartContext from "../../store/Cart-context";
+
 
 
 
 
 function NavBar(props) {
+    const {getCartQuantity} = useContext (CartContext);
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,7 +26,9 @@ function NavBar(props) {
                     <li><NavLink to ='/category/cursos' className="nav">Cursos</NavLink></li>
                     <li><NavLink to ='/category/productos' className="nav" >Productos</NavLink></li>
                     </ul>
-                    <CartWidget/>
+                   
+                    {getCartQuantity() > 0 && <CartWidget />}
+
                 </div>
             </div>
             </nav>
