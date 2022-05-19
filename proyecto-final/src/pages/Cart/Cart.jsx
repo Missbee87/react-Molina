@@ -13,11 +13,17 @@ function Cart() {
       {cartCtx.products.length !==0 ?
         <div className='total-container'>
           <h3>Precio Total :${cartCtx.getTotalPrice()}</h3>
-          <button>Terminar compra</button>
+          
           <button onClick={() => cartCtx.clear()}>Vaciar carrito</button>
           <button>
             <Link className='shop'  to='/'>Continuar comprando</Link>
           </button>
+          <br />
+          <br />
+          <Link to='/checkout'>
+          <button className='btn btn-info'>Finalizar compra</button>
+          </Link>
+          
         </div> :
         <>
         <h2>No hay productos en el carrito</h2>

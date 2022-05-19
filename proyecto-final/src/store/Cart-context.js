@@ -13,22 +13,14 @@ const CartContext = createContext ({
 
 export const CartContextProvider = ({children}) => {
     const [capacitaciones, setCapacitaciones] = useState([]);
+    
 
     const addProduct = (product, quantity) => {
         const repeatedItemIndex = capacitaciones.findIndex(capacitacion => capacitacion.id === product.id)
         if (repeatedItemIndex !== -1) {
-            const units = unitsPerProduct(repeatedItemIndex !== -1);
-            const {stock} = capacitaciones;
-            const quantityAvailable = stock - units;
-            if (quantity > quantityAvailable) {
-                alert (`no podés agregrar más de ${quantityAvailable} productos`);
-            }
-
-            
-           
-        setCapacitaciones(capacitaciones.map(p => p.id === product.id ? {...p, quantity: p.quantity + product.quantity}: p));
+           setCapacitaciones(capacitaciones.map(p => p.id === product.id ? {...p, quantity: p.quantity + product.quantity}: p));
         } else {
-        setCapacitaciones([product,...capacitaciones]);
+            setCapacitaciones([product,...capacitaciones]);
     }
 }
 
@@ -87,6 +79,7 @@ export const CartContextProvider = ({children}) => {
             getCartQuantity,
             getTotalPrice,
             unitsPerProduct
+        
         }}>
             {children}
         </CartContext.Provider>

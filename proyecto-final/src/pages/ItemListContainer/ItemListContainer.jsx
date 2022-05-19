@@ -37,7 +37,8 @@ function ItemListContainer () {
     SetLoading(true);
     getCapacitaciones(categoryId)
       .then( snapshot => {
-      setCapacitaciones(snapshot.docs.map( doc => { return {...doc.data(), id: doc.id}}));
+      setCapacitaciones(snapshot.docs.map( doc => { 
+        return {...doc.data(), id: doc.id}}));
       SetLoading(false);
     });
 
