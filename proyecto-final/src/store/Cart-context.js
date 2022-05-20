@@ -13,12 +13,15 @@ const CartContext = createContext ({
 
 export const CartContextProvider = ({children}) => {
     const [capacitaciones, setCapacitaciones] = useState([]);
-    
+
+            
+
 
     const addProduct = (product, quantity) => {
         const repeatedItemIndex = capacitaciones.findIndex(capacitacion => capacitacion.id === product.id)
         if (repeatedItemIndex !== -1) {
            setCapacitaciones(capacitaciones.map(p => p.id === product.id ? {...p, quantity: p.quantity + product.quantity}: p));
+           
         } else {
             setCapacitaciones([product,...capacitaciones]);
     }
