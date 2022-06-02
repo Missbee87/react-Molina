@@ -3,6 +3,7 @@ import { Link} from 'react-router-dom';
 import CartItem from '../../components/CartItem/CartItem';
 import CartContext from '../../store/Cart-context';
 import './Cart.css';
+import carrito from '../../components/NavBar/assets/carrito.png';
 
 function Cart() {
   const cartCtx = useContext(CartContext);
@@ -14,7 +15,8 @@ function Cart() {
         <div className='total-container'>
           <h3>Precio Total :${cartCtx.getTotalPrice()}</h3>
           
-          <button onClick={() => cartCtx.clear()}>Vaciar carrito</button>
+          <button className='vaciar' onClick={() => cartCtx.clear()}>Vaciar carrito</button>
+          <br />
           <button>
             <Link className='shop'  to='/'>Continuar comprando</Link>
           </button>
@@ -26,6 +28,7 @@ function Cart() {
           
         </div> :
         <>
+        <img src={carrito} alt="" />
         <h2>No hay productos en el carrito</h2>
         
         <button className='button-brown'>

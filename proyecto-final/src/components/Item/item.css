@@ -16,7 +16,7 @@
 .link {
     font-size: 30px;
     text-decoration: none;
-    color: blueviolet;
+    color: rgb(53, 52, 53);
     background-color: lightgray;
     border-radius: 5px;
     padding: 10px;
@@ -26,13 +26,5 @@
    padding: 10px;
    
 }
-.bubble-add {
-    margin: 0;
-    height: 0;
-    position: relative;
-    top: -20%;
-    left: 90%;
-   
-    
-}
+
 

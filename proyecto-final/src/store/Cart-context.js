@@ -15,6 +15,7 @@ export const CartContextProvider = ({children}) => {
     const [capacitaciones, setCapacitaciones] = useState([]);
 
             
+   
 
 
     const addProduct = (product, quantity) => {
@@ -28,18 +29,18 @@ export const CartContextProvider = ({children}) => {
 }
 
    
-    
-    const unitsPerProduct = (id) => {
-        return capacitaciones.find((capacitacion) => capacitacion.id === id).quantity;
+const unitsPerProduct = (id) => {
+    return capacitaciones.find((capacitacion) => capacitacion.id === id).quantity;
 };
+
     const removeProduct = (id) =>{
         if (unitsPerProduct(id) === 1) {
             return deleteById(id);
         }
         setCapacitaciones(
             capacitaciones.map((product) =>
-            product.id === id
-            ?{...product,quantity: product.quantity - 1}
+           product.id === id
+           ?{...product,quantity: product.quantity - 1}
             :product
         )
         );
@@ -81,7 +82,7 @@ export const CartContextProvider = ({children}) => {
             isInCart,
             getCartQuantity,
             getTotalPrice,
-            unitsPerProduct
+        
         
         }}>
             {children}

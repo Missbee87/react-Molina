@@ -14,7 +14,7 @@ function CartItem({capacitacion}) {
                 <img src={capacitacion?.imagen} alt="Imagen del producto" />
             </div>
             <p>{capacitacion?.nombre}</p>
-            <p>{capacitacion?.precio}</p>
+            <p>${capacitacion?.precio}</p>
             
         </div>
         

@@ -1,7 +1,6 @@
 import React, { useContext} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import "./ItemDetail.css";
-import {Link} from 'react-router-dom';
 import CartContext from '../../store/Cart-context';
 
 
@@ -32,7 +31,7 @@ function ItemDetail( {capacitacion}) {
             
             <div className='count-container'>
            
-            <ItemCount initial ={0} stock={capacitacion.stock} onAdd= {addHandler}/>
+            <ItemCount initial ={1} stock={capacitacion.stock} onAdd= {addHandler}/>
             
 
               

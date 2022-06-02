@@ -3,7 +3,8 @@ import CartContext from '../../store/Cart-context';
 import { addDoc, collection, getFirestore} from 'firebase/firestore';
 import { Spinner } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { clear } from '@testing-library/user-event/dist/clear';
+import asg from '../NavBar/assets/asg.jpg';
+
 
 
 const Checkout = () => {
@@ -46,14 +47,14 @@ const Checkout = () => {
         const items = products.map(e=> {return {id:e.id, title:e.nombre, price:e.precio, cantidad: e.quantity}})
         const total = getTotalPrice()
         const data = {buyer,items,dia,total}
-        console.log("data", data)
-        generateOrder(data)
+       generateOrder(data)
         
     }
 
   return (
     <>
    <h1>Finalizando compra</h1>
+   <img src={asg} alt="" />
    <hr />
    {Loading? <Spinner/> 
         : (!orderID &&<div>
@@ -95,6 +96,7 @@ const Checkout = () => {
                     </form>
                 </div>)
                 }
+
                 <div>
                 {
                     orderID&&(

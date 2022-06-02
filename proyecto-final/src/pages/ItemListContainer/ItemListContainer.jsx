@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './ItemListContainer.css';
 import ItemList from '../../components/ItemList';
-import { collection, getDocs, getFirestore, query, where, limit, doc} from 'firebase/firestore';
+import { collection, getDocs, getFirestore, query, where} from 'firebase/firestore';
 import { useParams } from 'react-router';
 import { Spinner } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
