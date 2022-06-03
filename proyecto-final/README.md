@@ -6,6 +6,9 @@
 
 <h2> Funcionalidad del proyecto </h2>
 <p> En ésta web se muestran los servicios, productos y cursos a la venta, todos separados por su respectiva categoría. Los usuarios pueden seleccionar la categoría deseada, luego seleccionar el producto y especificar la cantidad que deseen. La misma está sujeta al stock disponible de cada una </p>
+<h3> Demo </h3>
+>![alt text](public/react.gif)
+---
 
 <h4> Dependencias del proyecto </h4>
 <p>En éste proyecto se ha utilizado React Bootstrap y Reactstrap para implementar distintos estilos de la página </p>
