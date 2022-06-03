@@ -20,7 +20,6 @@ https://user-images.githubusercontent.com/95654493/171902306-05fd8774-ca36-42ec-
 
 <h4>Navegabilidad/Componentes</h4>
 <ul>
-  <li>Responsive</li>
   <li>Promises y hooks</li>
   <li>Routes y Links para navegaciones</li>
   <li>camelCase para eventos</li>
