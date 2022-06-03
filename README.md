@@ -8,7 +8,7 @@
 <p> En ésta web se muestran los servicios, productos y cursos a la venta, todos separados por su respectiva categoría. Los usuarios pueden seleccionar la categoría deseada, luego seleccionar el producto y especificar la cantidad que deseen. La misma está sujeta al stock disponible de cada una </p>
 <h3>Demo</h3>
   
-  ![Copia de react](https://user-images.githubusercontent.com/95654493/171901023-bbf08584-9218-446c-b15c-1e85fd08ad96.gif)
+
 
 
 
